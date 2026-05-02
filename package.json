@@ -1,7 +1,13 @@
 {
-  "name": "next-app",
+  "name": "monicore-design-system",
   "version": "0.1.0",
+  "description": "A professional, high-performance design system with dynamic tokens and real-time customization.",
   "private": true,
+  "homepage": "https://design-system-rose-eight.vercel.app/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/monicore-tech/Design_System.git"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
