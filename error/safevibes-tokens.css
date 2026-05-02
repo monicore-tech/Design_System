@@ -1,0 +1,13 @@
+:root {
+  --color-black: #0A0A0A;
+  --color-red: #C8372D;
+  --color-blue: #1A5AF5;
+  --color-white: #FAFAFA;
+  --color-surface: #F5F5F4;
+  --font-display: 'Playfair Display', serif;
+  --font-sans: 'Montserrat', sans-serif;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 14px;
+  --radius-xl: 22px;
+}

@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+@theme {
+  --color-accent-primary: var(--accent-primary);
+  --color-accent-secondary: var(--accent-secondary);
+  --color-accent-tertiary: var(--accent-tertiary);
+  
+  /* Use fixed variable names from DesignContext */
+  --font-display: var(--font-display-family);
+  --font-sans: var(--font-sans-family);
+  --font-mono: "DM Mono", monospace;
+
+  --radius-sm: var(--radius-sm);
+  --radius-md: var(--radius-md);
+  --radius-lg: var(--radius-lg);
+  --radius-xl: var(--radius-xl);
+  --radius-pill: 999px;
+
+  --shadow-xs: 0 1px 3px rgba(0,0,0,0.06);
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
+  --shadow-md: 0 8px 24px rgba(0,0,0,0.10);
+  --shadow-lg: 0 24px 56px rgba(0,0,0,0.14);
+
+  --ease-brand-out: cubic-bezier(.25,.46,.45,.94);
+  --ease-spring: cubic-bezier(.34,1.56,.64,1);
+}
+
+:root {
+  --background: var(--bg-page);
+  --foreground: var(--text-main);
+}
+
+@layer base {
+  * {
+    border-color: var(--border-subtle);
+  }
+  html {
+    @apply scroll-smooth transition-colors duration-500;
+    /* Initialize defaults in case context hasn't loaded yet */
+    --font-display-family: 'Playfair Display', serif;
+    --font-sans-family: 'DM Sans', sans-serif;
+  }
+  body {
+    background-color: var(--bg-page);
+    color: var(--text-main);
+    font-family: var(--font-sans);
+    @apply antialiased text-[15px] leading-relaxed transition-colors duration-500;
+  }
+  
+  hr {
+    @apply border-t border-[var(--border-subtle)] my-10;
+  }
+}
+
+@layer components {
+  .sg-container {
+    @apply max-w-[1160px] mx-auto px-10;
+  }
+
+  .glass-card {
+    background-color: var(--surface-glass);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--border-subtle);
+    @apply transition-all duration-300;
+  }
+}
